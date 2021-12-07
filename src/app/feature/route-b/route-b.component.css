@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    justify-content: end;
+}
+
+.dropdown {
+    margin-right: 5px;
+}
+
+/* Style buttons */
+.btn {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+
+#view{
+    margin-top: 2rem;
+}
+
+#btn{
+    background-color: goldenrod;
+}
+
+.body {
+    margin-top: 20px;
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.card {
+    width: auto;
+    height: 222px;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 4px;
+   
+}.card:hover{
+    
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.11);
+  overflow: hidden;
+  cursor: pointer;
+  
+  transform: scale(1.05);
+  border: 1px solid #efefef;
+  transition: 0.2s ease-in-out;
+}
+
+.grid-view {
+    grid-template-columns: 280px 280px 280px 280px;
+}
+
+.list-view {
+    margin-left: 8.5rem;
+    grid-template-columns: 480px 480px;
+}
+
+#listButton{
+width:3rem ;
+color: goldenrod;
+
+}
+
+#gridButton{
+width: 3rem;
+color: goldenrod;
+}
+
+.picButton{
+   color: goldenrod;
+}
+

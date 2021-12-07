@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.part {
+    /* width: 100px; */
+    /* background-color: beige; */
+    padding: 10px;
+    margin: 10px;
+}

@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="input">
+        <strong>Enter Timer Limit:</strong>
+        <input type="text" class="input-box" placeholder="Enter the number" [(ngModel)]="timerValue"
+            (ngModelChange)="clickCount=1">
+        <br>
+        <br>
+        <button class="button" (click)="startAndStop()">Start/Pause</button>
+        <button class="button" (click)="reset()">Reset</button>
+    </div>
+</div>
+
+<div id="pause" #pause>
+</div>

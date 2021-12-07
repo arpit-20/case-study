@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Teresa",
+        "class": 10,
+        "section": "D",
+        "sub1": 23,
+        "sub2": 54,
+        "sub3": 66
+    },
+    {
+        "name": "Patrick",
+        "class": 7,
+        "section": "E",
+        "sub1": 27,
+        "sub2": 55,
+        "sub3": 67
+    },
+    {
+        "name": "Wayne",
+        "class": 8,
+        "section": "C",
+        "sub1": 31,
+        "sub2": 59,
+        "sub3": 61
+    },
+    {
+        "name": "Kimball",
+        "class": 3,
+        "section": "B",
+        "sub1": 21,
+        "sub2": 51,
+        "sub3": 65
+    },
+    {
+        "name": "Grace",
+        "class": 6,
+        "section": "C",
+        "sub1": 24,
+        "sub2": 49,
+        "sub3": 71
+    },
+    {
+        "name": "Luthor",
+        "class": 4,
+        "section": "A",
+        "sub1": 32,
+        "sub2": 62,
+        "sub3": 50
+    }
+]

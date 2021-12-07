@@ -1,0 +1,20 @@
+<div class="container">
+    <div id="table">
+        <table>
+            <thead>
+                <th *ngFor="let key of keys">
+                    <p (click)="sortUsingColumn(key)">{{key}}</p>
+                </th>
+            </thead>
+            <tbody *ngFor="let data of sortedStudentMarksArray">
+                <td>{{data.name}}</td>
+                <td>{{data.class}}</td>
+                <td>{{data.section}}</td>
+                <td>{{data.sub1}}</td>
+                <td>{{data.sub2}}</td>
+                <td>{{data.sub3}}</td>
+            </tbody>
+        </table>
+    </div>
+  
+</div>

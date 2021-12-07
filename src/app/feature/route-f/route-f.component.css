@@ -1,0 +1,15 @@
+.container {
+    height: 10000px;
+    /* background-color: green; */
+    width: 100%;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    width: 40%;
+}

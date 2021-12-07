@@ -1,0 +1,17 @@
+<h2>Using Input/Output decorators</h2>
+<div class="container">
+    <div class="component border-class">
+        <app-sibling-a [countDown]="countDownValue" [btnTrigger]="buttonTrigger"
+            (currentTimedValue)="currentTimed($event)"></app-sibling-a>
+    </div>
+    <div class="component border-class">
+        <app-sibling-b [currentCounterStop]="currentTimerValue" (buttonTriggered)="buttonValue($event)"
+            (countDown)="countDown($event)"></app-sibling-b>
+    </div>
+    <div class="component">
+        <app-sibling-c [buttonTrigger]="buttonTrigger"></app-sibling-c>
+    </div>
+    <div class="component">
+        <app-sibling-d [btnTrigger]="buttonTrigger"></app-sibling-d>
+    </div>
+</div>

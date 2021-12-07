@@ -1,0 +1,35 @@
+<div class="container">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div id="view">
+        <button class="btn" id="btn" (click)="isGrid=false" alt="" style="margin-right: 2rem;" ><i class="fa fa-bars" ></i></button>
+
+        <button class="btn" id="btn" style="margin-right: 2rem;" (click)="isGrid=true"  alt="" ><i class="fa fa-th-large" id="btn"></i></button>
+               
+            <select [(ngModel)]="selectedOrder" style="margin-right: 2rem;" (click)="sortPrices()" >
+                <option>Price - Low to High</option>
+                <option>Price - High to Low</option>
+            </select>
+    </div>         
+
+</div>
+<div class="body" [ngClass]="{
+    'grid-view':isGrid,
+    'list-view':!isGrid
+}">
+    <div class="card" *ngFor="let data of productPriceShow">
+        <img *ngIf="isGrid" src="../../../assets/images/gift3.jpeg.jfif" alt="product image" width="250px" height="135px">
+        <img *ngIf="!isGrid" src="../../../assets/images/gift3.jpeg.jfif" alt="product image" width="450px" height="150px">
+        
+        <strong>product:</strong>&nbsp;
+        <span>{{data?.title}}</span>
+        <div>
+        <strong>Price: </strong>
+        <span>{{data?.price}}</span>
+            <div>
+                
+        <strong>Rating: </strong>
+        <span>{{data?.rating?.rate}}</span>
+            </div>
+        </div>
+    </div>
+</div>

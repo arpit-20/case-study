@@ -1,0 +1,77 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="nav">
+	<div class="content">
+		<div class="links nav-items">
+     
+      <a routerLink="route-a">Route A</a>
+    
+      <a routerLink="route-b">Route B</a>
+      <a routerLink="route-c">Route C</a>
+      <a routerLink="route-d">Route D</a>
+      <a routerLink="route-e">Route E</a>
+      <a routerLink="route-f">Route F</a>
+     
+		</div>
+		<div class="menu" (click)="onMenu()">
+			<input type="checkbox" hidden id="hamburger" />
+			<label for="hamburger" [hidden]="isOpen">&#9776;</label>
+			<label for="hamburger" [hidden]="!isOpen">&#9776;</label>
+		</div>
+		<div class="dropdown" id="dropdown" [class.show]="isOpen">
+      <!-- <div id="navlist"> -->
+		  <a routerLink="route-a" (click)="onMenu()">Route A</a>
+        <a routerLink="route-b" (click)="onMenu()">Route B</a>
+        <a routerLink="route-c" (click)="onMenu()">Route C</a>
+        <a routerLink="route-d" (click)="onMenu()">Route D</a>
+        <a routerLink="route-e" (click)="onMenu()">Route E</a>
+        <a routerLink="route-f" (click)="onMenu()">Route F</a>
+      <!-- </div> -->
+		</div>
+	</div>
+</div>
+
+
+<!-- <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+<ng-container *ngIf="navBar else hamBurger">
+
+    <div class="topnav" id="myTopnav">
+        <a routerLink="route-a">Route A</a>
+        <a routerLink="route-b">Route B</a>
+        <a routerLink="route-c">Route C</a>
+        <a routerLink="route-d">Route D</a>
+        <a routerLink="route-e">Route E</a>
+        <a routerLink="route-f">Route F</a>
+        <a href="javascript:void(0);" class="icon">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+</ng-container>
+
+<ng-template #hamBurger>
+    <div class="topnav">
+  <div id="myLinks" >
+    <a routerLink="route-a">Route A</a>
+    <a routerLink="route-b">Route B</a>
+    <a routerLink="route-c">Route C</a>
+    <a routerLink="route-d">Route D</a>
+    <a routerLink="route-e">Route E</a>
+    <a routerLink="route-f">Route F</a>
+  <a href="javascript:void(0);" class="icon">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</div>
+</ng-template> -->
+
+<router-outlet></router-outlet>
