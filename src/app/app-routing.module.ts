@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RouteAComponent } from './feature/route-a/route-a.component';
 
 const routes: Routes = [
   {
@@ -25,7 +26,16 @@ const routes: Routes = [
   {
     path: 'route-f',
     loadChildren: () => import('../app/feature/route-f/route-f.module').then(m => m.RouteFModule)
-  }
+  },
+  {
+    path: '', 
+    redirectTo: 'route-a', 
+    pathMatch: 'full' 
+  },
+  {
+    path:'route-a',
+    component:RouteAComponent
+  },
 ];
 
 @NgModule({
