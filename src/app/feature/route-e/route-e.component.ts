@@ -13,7 +13,7 @@ export class RouteEComponent implements OnInit {
  public keys!: any[];
  private studentMarks: any[] = [];
  private selectedKey: string = '';
- private clickCount: number = 0;
+ private clickCount: number = 1;
  public sortedStudentMarksArray!: any[];
 
   constructor(private sharedService: SharedService) { }
@@ -31,21 +31,32 @@ export class RouteEComponent implements OnInit {
   }
 
  public sortUsingColumn(key: string): void {
-    this.clickCount++;
+   
     if (this.selectedKey !== key) {
+      this.clickCount=1;
       this.selectedKey = key;
+      this.sortedStudentMarksArray = this.sortBySpecificKey(this.studentMarks, key);
+      this.clickCount++;
+      return
+    }else{
+      if (this.clickCount === 1) {
+        this.sortedStudentMarksArray = this.sortBySpecificKey(this.studentMarks, key);
+        this.clickCount++;
+       return
+      }
+       if (this.clickCount === 2) {
+        this.sortedStudentMarksArray = this.reverseBySpecificKey(this.studentMarks, key);
+        this.clickCount++;
+        return
+      }
+      else if (this.clickCount === 3) {
+        this.sortedStudentMarksArray = this.studentMarks;
+        this.clickCount = 1;
+        return
+      }
     }
 
-    if (this.clickCount === 1) {
-      this.sortedStudentMarksArray = this.sortBySpecificKey(this.studentMarks, key);
-    }
-    else if (this.clickCount === 2) {
-      this.sortedStudentMarksArray = this.reverseBySpecificKey(this.studentMarks, key);
-    }
-    else if (this.clickCount === 3) {
-      this.sortedStudentMarksArray = this.studentMarks;
-      this.clickCount = 0;
-    }
+  
   }
 
  private sortBySpecificKey = function (arr: any, p: any) {
